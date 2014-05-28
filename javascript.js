@@ -26,10 +26,10 @@ if (sRandom === "Ella" || sRandom === "Él" || sRandom === "Paula" || sRandom ==
     var verb = pFirstVerb[randomZeroToTwo];
 } else {
     var verb = sFirstVerb[randomZeroToTwo];
-};
+}
 
-var noun
-var doPronoun
+var noun;
+var doPronoun;
 if (randomZeroToTwo === 0) {
     var noun = " un regalo para ";
     var doPronoun = "lo";
@@ -39,9 +39,9 @@ if (randomZeroToTwo === 0) {
 } else {
     var noun = " una carta para ";
     var doPronoun = "la";
-};
+}
 
-var ioPronoun
+var ioPronoun;
 if (whichSubjTwo === 0) {
    var  ioPronoun = "me";
 } else if (whichSubjTwo === 1 || whichSubjTwo === 4) {
@@ -50,18 +50,33 @@ if (whichSubjTwo === 0) {
     var ioPronoun = "nos";
 } else if (whichSubjTwo === 3) {
     var ioPronoun = "te";
-};
+}
+
+/* I have no idea what is going on after this
+function doStuff()
+{
+    var userAnswer = document.getElementById("someInput");
+    var theirAnswer = userAnswer.value;
+    
+    };
+if (theirAnswer == sub + " " + ioPronoun + " " + doPronoun + " "+ verb) {
+        alert("You're right!")}
+        else {
+            alert("You're wrong. The answer was "sub + " " + ioPronoun + " " + doPronoun + " "+ verb)
+        };
+*/
+function doStuff() {
+var answerUser = prompt ("Replace the direct and indirect objects in the sentence with their respective pronouns: "+ sub + " " + verb + noun + indirectObject);
+
+if (answerUser == sub + " " + ioPronoun + " " + doPronoun + " "+ verb) {
+    alert("Congrats!");}
+    else {
+        alert("Your answer is incorrect. The correct answer is " + sub + " " + ioPronoun + " " + doPronoun + " "+ verb);}
+}
 
 
-document.getElementById("button").onclick = spanishEx();
 
-function spanishEx() {
-    var answerUser = prompt("Replace the direct and indirect objects in the sentence with their respective pronouns: " + sub + " " + verb + noun + indirectObject + ". Answer: " + sub + " " + ioPronoun + " " + doPronoun + " "
-                  + verb);
-   
-};
 
 /*Answer is supposed to show up if answerUser is incorrect. Also, prompt should show up only if button is clicked.
 
 Ideally, pictures will link to other pages and the exercises will not be on the main page.*/
-
